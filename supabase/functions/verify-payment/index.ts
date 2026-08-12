@@ -2,7 +2,7 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { createOrderFromIntent } from "../_shared/order.ts";
 
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Origin": "https://deslu-eatery.netlify.app/",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
