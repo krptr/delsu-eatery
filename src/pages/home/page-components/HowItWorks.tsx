@@ -31,7 +31,7 @@ export function HowItWorks() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 relative">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 relative">
           {STEPS.map((s, i) => {
             const Icon = s.icon;
             return (

@@ -35,7 +35,7 @@ export function Categories() {
           </Link> */}
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 sm:gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
           {CATEGORIES.map((c, index) => {
             const Icon = c.icon;
             const count = items.filter((i) => i.category === c.name).length;

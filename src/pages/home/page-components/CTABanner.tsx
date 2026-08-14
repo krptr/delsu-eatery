@@ -28,14 +28,14 @@ export function CTABanner() {
             Fresh meals, delivered fast to every hostel and faculty on campus.
           </p>
 
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 rounded-full bg-card border border-border shadow-soft p-2 max-w-md mx-auto">
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 rounded-full md:bg-card md:border md:border-border shadow-soft p-2 max-w-md mx-auto">
             <Link to={ROUTES.auth} className="w-full sm:flex-1">
-              <Button className="w-full rounded-full h-12 bg-gradient-primary text-primary-foreground">
+              <Button className="md:w-full rounded-full h-12 bg-gradient-primary text-primary-foreground">
                 Create account
               </Button>
             </Link>
             <Link to={ROUTES.menu} className="w-full sm:flex-1">
-              <Button variant="ghost" className="w-full rounded-full h-12">
+              <Button variant="ghost" className="md:w-full rounded-full h-12">
                 Browse menu
                 <ArrowRight className="h-4 w-4 ml-1" />
               </Button>

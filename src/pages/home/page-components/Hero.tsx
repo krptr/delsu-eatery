@@ -33,10 +33,10 @@ export function Hero() {
           DELSU Campus Eatery · Abraka
         </span>
 
-        <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl text-white font-display font-black leading-[1.1] tracking-tight">
+        <h1 className="mt-6 text-3xl sm:text-5xl lg:text-6xl text-white font-display font-black leading-[1.1] tracking-tight">
           Campus meals, <span className="text-secondary">cooked with care.</span>
         </h1>
-        <p className="italic font-light text-accent text-4xl sm:text-5xl lg:text-6xl font-display leading-[1.1] tracking-tight">
+        <p className="italic font-light text-accent text-3xl sm:text-5xl lg:text-6xl font-display leading-[1.1] tracking-tight mt-2">
           You crave it, We cook it.
         </p>
 
@@ -69,7 +69,7 @@ export function Hero() {
           <Stat icon={<MapPin className="h-4 w-4" />} value="All hostels" label="Coverage" />
           <Stat
             icon={<UtensilsCrossed className="h-4 w-4" />}
-            value={`${items.length}+`}
+            value="20+"
             label="Dishes to choose"
           />
         </div>
@@ -83,7 +83,7 @@ function Stat({ icon, value, label }: { icon: React.ReactNode; value: string; la
     <div className="space-y-1 flex flex-col items-center">
       <div className="flex items-center gap-1.5 text-accent">
         {icon}
-        <span className="text-lg font-bold text-foreground">{value}</span>
+        <span className="text-base sm:text-lg lg:text-xl font-bold text-foreground">{value}</span>
       </div>
       <p className="text-xs text-muted-foreground">{label}</p>
     </div>
