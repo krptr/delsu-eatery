@@ -18,8 +18,13 @@ const STATUS_META: Record<OrderStatus, { icon: any; color: string }> = {
 export default function OrdersPage() {
   const [active, setActive] = useState<Order | null>(null);
   const { user, isGuest } = useAuth();
-  const { orders: myOrders } = useOrders();
   const nav = useNavigate();
+
+  const { orders: myOrders, refresh } = useOrders();
+
+  useEffect(() => {
+    refresh();
+  }, []);
 
   useEffect(() => {
     if (isGuest) nav({ to: ROUTES.auth });

@@ -58,7 +58,7 @@ export async function createOrderFromIntent(
   const total = subtotal + deliveryFee;
 
   if (verifiedAmountKobo !== total * 100) {
-    return { error: "Payment amount does not match order total", status: 400 };
+    return { error: "Payment amount does not match order total", status: 400 }; //
   }
 
   const { data: order, error: orderErr } = await admin

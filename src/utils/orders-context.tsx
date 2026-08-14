@@ -27,6 +27,7 @@ export type Order = {
 type Ctx = {
   orders: Order[];
   loading: boolean;
+  refresh: () => void;
 };
 
 const OrdersCtx = createContext<Ctx | null>(null);
@@ -153,7 +154,11 @@ export function OrdersProvider({ children }: { children: ReactNode }) {
     };
   }, [userId]);
 
-  return <OrdersCtx.Provider value={{ orders, loading }}>{children}</OrdersCtx.Provider>;
+  return (
+    <OrdersCtx.Provider value={{ orders, loading, refresh: () => userId && fetchOrders(userId) }}>
+      {children}
+    </OrdersCtx.Provider>
+  );
 }
 
 export function useOrders() {
