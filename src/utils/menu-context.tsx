@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 import { supabase } from "./supabase-client";
+import { optimizedImage } from "./cloudinary-url";
 
 export type MenuItem = {
   id: string;
@@ -55,7 +56,7 @@ function fromDb(row: DbRow): MenuItem {
     name: row.name,
     category: row.category,
     price: row.price,
-    image: row.image_url ?? "",
+    image: optimizedImage(row.image_url ?? ""),
     description: row.description ?? "",
     rating: row.rating ?? 4.5,
     orderCount: row.order_count ?? 0,
