@@ -54,7 +54,7 @@ export async function createOrderFromIntent(
   });
 
   const subtotal = lineItems.reduce((s, i) => s + i.price * i.quantity, 0);
-  const delivery = method === "pickup" || subtotal >= 10000 ? 0 : 300;
+  const deliveryFee = intent.method === "pickup" || subtotal >= 10000 ? 0 : 300;
   const total = subtotal + deliveryFee;
 
   if (verifiedAmountKobo !== total * 100) {
